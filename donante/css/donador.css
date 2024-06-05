@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eaeaea;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Eliminar el margen */
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%; /* Limita el ancho máximo al 100% del viewport */
+    overflow: hidden;
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 0;
+}
+
+
+.container .slide {
+    display: flex;
+    width: 100vw; /* Ancho completo de la ventana del navegador */
+    overflow-x: hidden; /* Ocultar el desplazamiento horizontal */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+.container .slide .item {
+    min-width: 100vw; /* Ancho mínimo igual al de la ventana */
+    height: 60vh; /* Altura ajustable según tu necesidad */
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.descripcion {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.container .slide .item .content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px); /* Ancho del contenido ajustado */
+    max-width: 400px;
+    padding: 20px;
+    text-align: left;
+    color: #ffffff;
+    background-color: rgba(26, 38, 107, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.container .slide .item:hover .content {
+    opacity: 1;
+}
+
+/* Estilos específicos para los botones "Anterior" y "Siguiente" */
+.content .navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rgba(26, 38, 107, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 140px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav ul li a:hover {
+    color: #cccccc;
+}
+
+.content .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content .des {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.content button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2241a7;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content button:hover {
+    background-color: #45a049;
+}
+

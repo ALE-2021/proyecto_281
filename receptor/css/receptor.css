@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eaeaea;
+    font-family: 'Roboto', sans-serif; /* Cambio de fuente */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container .slide {
+    display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+.container .slide .item {
+    min-width: 100vw;
+    height: 60vh;
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.descripcion {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.container .slide .item .content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 400px;
+    padding: 20px;
+    text-align: left;
+    color: #ffffff;
+    background-color: rgba(26, 38, 107, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.container .slide .item:hover .content {
+    opacity: 1;
+}
+
+.content .navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header {
+    background-color: rgba(26, 38, 107, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 140px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #cccccc;
+}
+
+.content .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content .des {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.content button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2241a7;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos adicionales para la sección de solicitud */
+#solicitud {
+    padding: 50px 0;
+}
+
+#solicitud h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2241a7;
+}
+
+#solicitud form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#solicitud form .form-group {
+    margin-bottom: 20px;
+}
+
+#solicitud form label {
+    font-weight: bold;
+    color: #2241a7;
+}
+
+#solicitud form .form-control {
+    width: calc(100% - 20px); /* Reducción del ancho de los campos de texto */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+}
+
+#solicitud form .form-control:focus {
+    outline: none;
+    border-color: #45a049;
+}
+
+#solicitud form .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2241a7;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#solicitud form .btn-primary:hover {
+    background-color: #45a049;
+}
+
+#solicitud form .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#solicitud form .table th,
+#solicitud form .table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#solicitud form .table th {
+    background-color: #f2f2f2;
+    color: #2241a7;
+    font-weight: bold;
+}
